@@ -5,3 +5,17 @@ sample 4
 final result done 
 final feature done 
 
+def hanoi(n,a,b,c):
+    if n==1:
+        print("move disk from %s to %s" %(a, c))
+    elif n==0:
+        return
+    else:
+        hanoi(n-1,a,c,b)
+        print("move disk from %s to %s" %(a ,c))
+        hanoi(n-1,c,a,b)
+number=int(input("enter the number of disks"))
+a='A'
+b='B'
+c='C'
+hanoi(number,a,b,c)
